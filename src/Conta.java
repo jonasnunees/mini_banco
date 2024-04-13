@@ -65,6 +65,11 @@ public class Conta {
         System.out.println("Tipo da conta: " + this.getTipo());
         System.out.println("Número da conta: " + this.getNumeroConta());
         System.out.println("Saldo: R$ " + this.getSaldo());
+        exibeMensagem();
+    }
+
+    // métodos para retornar uma mensagem caso a conta esteja inativa ou ativa
+    public void exibeMensagem(){
         if(contaAtiva){
             System.out.println("Essa conta está ativa");
         } else{
