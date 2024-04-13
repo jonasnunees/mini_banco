@@ -2,15 +2,13 @@ package src;
 
 public class Conta {
 
-    private String titular;
     private String tipo;
     private String numeroConta;
     private float saldo;
     private boolean contaAtiva;
 
     // método construtor
-    public Conta(String titular, String tipo, String numeroConta, float saldo, boolean contaAtiva){
-        this.titular = titular;
+    public Conta(String tipo, String numeroConta, float saldo, boolean contaAtiva){
         this.tipo = tipo;
         this.numeroConta = numeroConta;
         this.saldo = saldo;
@@ -18,9 +16,6 @@ public class Conta {
     }
 
     // métodos getters
-    public String getTitular(){
-        return titular;
-    }
 
     public String getTipo(){
         return tipo;
@@ -39,9 +34,6 @@ public class Conta {
     }
 
     // métodos setters
-    public void setTitular(String titular){
-        this.titular = titular;
-    }
 
     public void setTipo(String tipo){
         this.tipo = tipo;
@@ -57,15 +49,6 @@ public class Conta {
 
     public void setContaAtiva(boolean contaAtiva){
         this.contaAtiva = contaAtiva;
-    }
-
-    // método para retornar as informações do cliente na tela
-    public void status(){
-        System.out.println("Nome do titular: " + this.getTitular());
-        System.out.println("Tipo da conta: " + this.getTipo());
-        System.out.println("Número da conta: " + this.getNumeroConta());
-        System.out.println("Saldo: R$ " + this.getSaldo());
-        exibeMensagem();
     }
 
     // método para retornar uma mensagem caso a conta esteja inativa ou ativa
