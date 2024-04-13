@@ -60,6 +60,15 @@ public class Conta {
         }
     }
 
+    // bônus de criação de conta
+    public void bonusCriacaoConta(){
+        if(this.tipo == "cc"){
+            this.saldo += 50f;
+        } else if(this.tipo == "cp"){
+            this.saldo += 150f;
+        }
+    }
+
     // métodos para movimentação da conta
 
     // método para realizar um saque
@@ -104,8 +113,15 @@ public class Conta {
         if(!contaAtiva){
             System.out.println("Não foi feita nenhuma alteração... a conta já está desativada!");
         } else{
-            setContaAtiva(false);
-            exibeMensagem();
+            if(this.saldo < 0){
+                System.out.println("Seu saldo é negativo e por isso você não pode fechar sua conta. Quite seus débitos antes de continuar!");
+            } else if(this.saldo > 0){
+                System.out.println("Falta pouco para concluir sua solicitação. Saque todo seu dinheiro e depois volte aqui para encerrar sua conta!");
+            } else{
+                setContaAtiva(false);
+                exibeMensagem();
+            }
+
         }
     }
 
