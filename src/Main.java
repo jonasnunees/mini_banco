@@ -8,6 +8,7 @@ public class Main {
         c1.bonusCriacaoConta();
         c1.status();
         c1.deposito(25f);
+        c1.saque(40f);
 
     }
 

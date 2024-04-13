@@ -2,8 +2,8 @@ package src;
 
 public class Conta {
 
-    private String tipo;
-    private String numeroConta;
+    private final String tipo;
+    private final String numeroConta;
     private float saldo = 0;
     private boolean contaAtiva = true;
 

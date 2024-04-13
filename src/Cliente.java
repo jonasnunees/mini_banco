@@ -8,8 +8,8 @@ public class Cliente extends Conta {
         this.cpf = cpf;
     }
 
-    private String nomeTitular;
-    private String cpf;
+    private final String nomeTitular;
+    private final String cpf;
 
     // métodos getters
     public String getNomeTitular(){
@@ -18,15 +18,6 @@ public class Cliente extends Conta {
 
     public String getCpf(){
         return cpf;
-    }
-
-    // métodos setters
-    public void setNomeTitular(String nomeTitular){
-        this.nomeTitular = nomeTitular;
-    }
-
-    public void setCpf(String cpf){
-        this.cpf = cpf;
     }
 
     // método para retornar as informações do cliente na tela
