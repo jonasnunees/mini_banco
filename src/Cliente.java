@@ -2,8 +2,8 @@ package src;
 
 public class Cliente extends Conta {
 
-    public Cliente(String nomeTitular, String cpf, String tipo, String numeroConta, float saldo, boolean contaAtiva) {
-        super(tipo, numeroConta, saldo, contaAtiva);
+    public Cliente(String nomeTitular, String cpf, String tipo, String numeroConta) {
+        super(tipo, numeroConta);
         this.nomeTitular = nomeTitular;
         this.cpf = cpf;
     }
@@ -36,7 +36,6 @@ public class Cliente extends Conta {
         System.out.println("Tipo da conta: " + this.getTipo());
         System.out.println("Número da conta: " + this.getNumeroConta());
         System.out.println("Saldo: R$ " + this.getSaldo());
-        exibeMensagem();
     }
 
 }

@@ -4,15 +4,13 @@ public class Conta {
 
     private String tipo;
     private String numeroConta;
-    private float saldo;
-    private boolean contaAtiva;
+    private float saldo = 0;
+    private boolean contaAtiva = true;
 
     // método construtor
-    public Conta(String tipo, String numeroConta, float saldo, boolean contaAtiva){
+    public Conta(String tipo, String numeroConta){
         this.tipo = tipo;
         this.numeroConta = numeroConta;
-        this.saldo = saldo;
-        this.contaAtiva = contaAtiva;
     }
 
     // métodos getters
@@ -29,24 +27,7 @@ public class Conta {
         return saldo;
     }
 
-    public boolean getContaAtiva(){
-        return contaAtiva;
-    }
-
     // métodos setters
-
-    public void setTipo(String tipo){
-        this.tipo = tipo;
-    }
-
-    public void setNumeroConta(String numeroConta){
-        this.numeroConta = numeroConta;
-    }
-
-    public void setSaldo(float saldo){
-        this.saldo = saldo;
-    }
-
     public void setContaAtiva(boolean contaAtiva){
         this.contaAtiva = contaAtiva;
     }
