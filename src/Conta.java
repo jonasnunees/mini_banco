@@ -73,18 +73,24 @@ public class Conta {
 
     // método para realizar um saque
     public void saque(float saque){
-        if(saldo > 0 && saldo >= saque){
-            saldo -= saque;
-            System.out.println("Operação realizada com sucesso! Seu novo saldo é de R$ " + this.saldo);
-        } else{
-            System.out.println("Não foi possível realizar a operação! Você tentou realizar um saque no valor de R$ " + saque + " mas o seu saldo é de R$ " + this.saldo);
+        if(contaAtiva){
+            if(saldo > 0 && saldo >= saque){
+                saldo -= saque;
+                System.out.println("Operação realizada com sucesso! Seu novo saldo é de R$ " + this.saldo);
+            } else{
+                System.out.println("Não foi possível realizar a operação! Você tentou realizar um saque no valor de R$ " + saque + " mas o seu saldo é de R$ " + this.saldo);
+            }
         }
     }
 
     // método para realizar um depósito
     public void deposito(float deposito){
-        this.saldo += deposito;
-        System.out.println("Operação realizada com sucesso! Seu novo saldo é de R$ " + this.saldo);
+        if(contaAtiva){
+            this.saldo += deposito;
+            System.out.println("Operação realizada com sucesso! Seu novo saldo é de R$ " + this.saldo);
+        } else{
+            System.out.println("Não é possível prosseguir com a solicitação, essa conta está desativada!");
+        }
     }
 
     // método para pagar mensalidade da conta
