@@ -7,6 +7,9 @@ public class Main {
         Cliente c1 = new Cliente("Jonas", "123456789-00", "Corrente", "123456-0", 0.64f, true);
 
         c1.status();
+        c1.pagarMensalidade();
+        c1.deposito(50f);
+        c1.pagarMensalidade();
 
     }
 

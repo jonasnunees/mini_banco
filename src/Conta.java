@@ -74,7 +74,20 @@ public class Conta {
 
     // método para realizar um depósito
     public void deposito(float deposito){
-        saldo += deposito;
+        this.saldo += deposito;
+        System.out.println("Operação realizada com sucesso! Seu novo saldo é de R$ " + this.saldo);
+    }
+
+    // método para pagar mensalidade da conta
+    public void pagarMensalidade(){
+        float mensalidade = 14.9f;
+        if(this.saldo >= mensalidade){
+            this.saldo -= mensalidade;
+            System.out.println("A mensalidade custa R$ " + mensalidade + ". Seu novo saldo é de R$ " + this.saldo);
+        } else{
+            System.out.println("Saldo insuficiente... deposite um valor maior que R$ " + mensalidade + " para pagar sua mensalidade ou sua conta será desativada em breve.");
+        }
+
     }
 
     // método para ativar a conta caso esteja desativada
