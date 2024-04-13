@@ -8,6 +8,9 @@ public class Main {
 
         c1.status();
         c1.saque(7.8f);
+        c1.ativaConta();
+        c1.desativaConta();
+        c1.desativaConta();
 
     }
 

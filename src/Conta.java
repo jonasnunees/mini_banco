@@ -94,4 +94,23 @@ public class Conta {
         saldo += deposito;
     }
 
+    // método para ativar a conta caso esteja desativada
+    public void ativaConta(){
+        if(contaAtiva){
+            exibeMensagem();
+        } else{
+            setContaAtiva(true);
+        }
+    }
+
+    // método para desativar a conta
+    public void desativaConta(){
+        if(!contaAtiva){
+            System.out.println("Não foi feita nenhuma alteração... a conta já está desativada!");
+        } else{
+            setContaAtiva(false);
+            exibeMensagem();
+        }
+    }
+
 }
