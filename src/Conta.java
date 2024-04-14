@@ -14,7 +14,6 @@ public class Conta {
     }
 
     // métodos getters
-
     public String getTipo(){
         return tipo;
     }
@@ -56,7 +55,7 @@ public class Conta {
     public void saque(float saque){
         if(contaAtiva){
             if(saldo > 0 && saldo >= saque){
-                saldo -= saque;
+                this.saldo -= saque;
                 System.out.println("Operação realizada com sucesso! Seu novo saldo é de R$ " + this.saldo);
             } else{
                 System.out.println("Não foi possível realizar a operação! Você tentou realizar um saque no valor de R$ " + saque + " mas o seu saldo é de R$ " + this.saldo);
@@ -76,14 +75,13 @@ public class Conta {
 
     // método para pagar mensalidade da conta
     public void pagarMensalidade(){
-        float mensalidade = 14.9f;
-        if(this.saldo >= mensalidade){
-            this.saldo -= mensalidade;
-            System.out.println("A mensalidade custa R$ " + mensalidade + ". Seu novo saldo é de R$ " + this.saldo);
-        } else{
-            System.out.println("Saldo insuficiente... deposite um valor maior que R$ " + mensalidade + " para pagar sua mensalidade ou sua conta será desativada em breve.");
+        if(contaAtiva){
+            if(this.tipo == "cc"){
+                this.saldo -= 12f;
+            } else if(this.tipo == "cp"){
+                this.saldo -= 20f;
+            }
         }
-
     }
 
     // método para ativar a conta caso esteja desativada
@@ -108,8 +106,6 @@ public class Conta {
                 setContaAtiva(false);
                 exibeMensagem();
             }
-
         }
     }
-
 }

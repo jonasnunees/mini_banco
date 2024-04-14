@@ -9,6 +9,8 @@ public class Main {
         c1.status();
         c1.deposito(25f);
         c1.saque(40f);
+        c1.pagarMensalidade();
+
 
     }
 
