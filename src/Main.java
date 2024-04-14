@@ -7,9 +7,7 @@ public class Main {
         Cliente c1 = new Cliente("Jonas", "123456789-00", "cc", "123456-0");
         c1.bonusCriacaoConta();
         c1.status();
-        c1.deposito(25f);
-        c1.saque(40f);
-        c1.pagarMensalidade();
+        c1.deposito(30f);
 
 
     }
